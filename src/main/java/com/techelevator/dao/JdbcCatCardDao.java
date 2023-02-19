@@ -37,7 +37,6 @@ public class JdbcCatCardDao implements CatCardDao {
 	public CatCard get(long id) {
 		CatCard card = null;
 		String sql = "SELECT id, img_url, fact, caption FROM catcards WHERE id = ? ";
-
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql,id);
 		if(results.next()) {
 			card = mapRowToCard(results);
