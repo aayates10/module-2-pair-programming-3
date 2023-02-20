@@ -19,8 +19,8 @@ public class RestCatFactService implements CatFactService {
 
 	@Override
 	public CatFact getFact() {
-		String urlFact  = API_BASE_URL + FACT_URL;
-		CatFact catFact = restTemplate.getForObject(urlFact, CatFact.class);
+		//String urlFact  = API_BASE_URL + FACT_URL;
+		CatFact catFact = restTemplate.getForObject(FACT_URL, CatFact.class);
 		// TODO Auto-generated method stub
 		return catFact;
 

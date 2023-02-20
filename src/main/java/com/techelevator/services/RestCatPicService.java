@@ -11,7 +11,7 @@ public class RestCatPicService implements CatPicService {
 	@Override
 	public CatPic getPic() {
 
-		CatPic catPic = restTemplate.getForObject("https://cat-data.netlify.app/images/cat-with-bananas-527x600.jpg", CatPic.class);
+		CatPic catPic = restTemplate.getForObject("https://cat-data.netlify.app/api/pictures/random", CatPic.class);
 		return catPic;
 		// TODO Auto-generated method stub
 
